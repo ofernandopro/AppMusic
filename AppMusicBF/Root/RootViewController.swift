@@ -19,8 +19,16 @@ class RootViewController: UIViewController {
     
     override func loadView() {
         self.screen = RootScreen()
-        self.screen?.configDelegates(tableViewDelegate: self, tableViewDataSource: self)
+        self.screen?.configDelegates(rootScreenDelegate: self, tableViewDelegate: self, tableViewDataSource: self)
         self.view = self.screen
+    }
+    
+}
+
+extension RootViewController: RootScreenDelegate {
+    
+    func tappedProfileButton() {
+        print(#function)
     }
     
 }
