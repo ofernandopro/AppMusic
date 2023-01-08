@@ -19,8 +19,12 @@ class RootViewController: UIViewController {
     
     override func loadView() {
         self.screen = RootScreen()
-        self.screen?.configDelegates(rootScreenDelegate: self, tableViewDelegate: self, tableViewDataSource: self)
+        self.screen?.configDelegates(rootScreenDelegate: self, collectionViewDelegate: self, collectionViewDataSource: self, tableViewDelegate: self, tableViewDataSource: self)
         self.view = self.screen
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
 }
@@ -45,6 +49,28 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+}
+
+extension RootViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicTypeCollectionViewCell.identifier, for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //return CGSize.init(width: view.frame.width, height: 50)
+        return CGSize.init(width: 150, height: 50)
     }
     
 }

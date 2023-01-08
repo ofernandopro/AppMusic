@@ -50,10 +50,16 @@ class RootScreen: UIView {
     }()
     
     lazy var collectionView: UICollectionView = {
-       let cv = UICollectionView()
+        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.translatesAutoresizingMaskIntoConstraints = false
-        
-        cv.showsVerticalScrollIndicator = false
+        cv.backgroundColor = .clear
+        cv.showsHorizontalScrollIndicator = true
+        cv.register(MusicTypeCollectionViewCell.self, forCellWithReuseIdentifier: MusicTypeCollectionViewCell.identifier)
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 150, height: 50)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        cv.setCollectionViewLayout(layout, animated: false)
         return cv
     }()
     
@@ -82,6 +88,7 @@ class RootScreen: UIView {
         self.headerView.addSubview(self.logoImageView)
         self.headerView.addSubview(self.titleLabel)
         self.headerView.addSubview(self.profileButton)
+        self.headerView.addSubview(self.collectionView)
         self.addSubview(self.tableView)
     }
     
@@ -101,12 +108,17 @@ class RootScreen: UIView {
             
             self.titleLabel.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.logoImageView.trailingAnchor, constant: 5),
-            self.titleLabel.trailingAnchor.constraint(equalTo: self.profileButton.leadingAnchor, constant: 20),
+            self.titleLabel.trailingAnchor.constraint(equalTo: self.profileButton.leadingAnchor, constant: -20),
             
             self.profileButton.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
             self.profileButton.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -20),
             self.profileButton.heightAnchor.constraint(equalToConstant: 50),
             self.profileButton.widthAnchor.constraint(equalToConstant: 50),
+            
+            self.collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.collectionView.bottomAnchor.constraint(equalTo: self.headerView.bottomAnchor, constant: -10),
+            self.collectionView.heightAnchor.constraint(equalToConstant: 50),
             
             self.tableView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor),
             self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -117,8 +129,10 @@ class RootScreen: UIView {
                 
     }
     
-    public func configDelegates(rootScreenDelegate: RootScreenDelegate, tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource) {
+    public func configDelegates(rootScreenDelegate: RootScreenDelegate, collectionViewDelegate: UICollectionViewDelegate, collectionViewDataSource: UICollectionViewDataSource, tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource) {
         self.delegate = rootScreenDelegate
+        self.collectionView.delegate = collectionViewDelegate
+        self.collectionView.dataSource = collectionViewDataSource
         self.tableView.delegate = tableViewDelegate
         self.tableView.dataSource = tableViewDataSource
     }

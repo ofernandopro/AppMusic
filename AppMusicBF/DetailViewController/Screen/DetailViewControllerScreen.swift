@@ -151,7 +151,7 @@ class DetailViewControllerScreen: UIView {
         self.playerViewBottomAchor?.isActive = true
     }
     
-    public func configAllDelegates(tableViewDelegate:UITableViewDelegate,tableViewDataSource:UITableViewDataSource,scrollViewDelegate:UIScrollViewDelegate,detailViewScreenDelegate:DetailViewControllerScreenDelegate){
+    public func configAllDelegates(tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource, scrollViewDelegate: UIScrollViewDelegate, detailViewScreenDelegate: DetailViewControllerScreenDelegate){
         self.tableView.delegate = tableViewDelegate
         self.tableView.dataSource = tableViewDataSource
         self.scrollView.delegate = scrollViewDelegate
