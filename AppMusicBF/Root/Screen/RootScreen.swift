@@ -33,7 +33,7 @@ class RootScreen: UIView {
        let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .white
-        l.font = UIFont.boldSystemFont(ofSize: 30)
+        l.font = UIFont.boldSystemFont(ofSize: 26)
         l.text = "Music"
         return l
     }()
@@ -43,7 +43,7 @@ class RootScreen: UIView {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("", for: .normal)
         btn.setImage(UIImage(systemName: "person.crop.circle.fill"), for: .normal)
-        btn.tintColor = UIColor.white
+        btn.tintColor = UIColor.systemPink
         btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         btn.addTarget(self, action: #selector(self.profilePressed), for: .touchUpInside)
         return btn
@@ -103,21 +103,21 @@ class RootScreen: UIView {
             
             self.logoImageView.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
             self.logoImageView.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor, constant: 12),
-            self.logoImageView.heightAnchor.constraint(equalToConstant: 40),
-            self.logoImageView.widthAnchor.constraint(equalToConstant: 40),
+            self.logoImageView.heightAnchor.constraint(equalToConstant: 30),
+            self.logoImageView.widthAnchor.constraint(equalToConstant: 30),
             
             self.titleLabel.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.logoImageView.trailingAnchor, constant: 5),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.profileButton.leadingAnchor, constant: -20),
             
             self.profileButton.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
-            self.profileButton.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -20),
-            self.profileButton.heightAnchor.constraint(equalToConstant: 50),
-            self.profileButton.widthAnchor.constraint(equalToConstant: 50),
+            self.profileButton.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -10),
+            self.profileButton.heightAnchor.constraint(equalToConstant: 30),
+            self.profileButton.widthAnchor.constraint(equalToConstant: 30),
             
             self.collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.collectionView.bottomAnchor.constraint(equalTo: self.headerView.bottomAnchor, constant: -10),
+            self.collectionView.bottomAnchor.constraint(equalTo: self.headerView.bottomAnchor, constant: -20),
             self.collectionView.heightAnchor.constraint(equalToConstant: 50),
             
             self.tableView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor),

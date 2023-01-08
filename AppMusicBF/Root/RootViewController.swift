@@ -11,6 +11,8 @@ class RootViewController: UIViewController {
     
     var screen: RootScreen?
     
+    let listOptionsMusicTypes = ["Relax", "Em trânsito", "Energia", "Treino", "Foco"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,12 +62,13 @@ extension RootViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.listOptionsMusicTypes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicTypeCollectionViewCell.identifier, for: indexPath)
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicTypeCollectionViewCell.identifier, for: indexPath) as? MusicTypeCollectionViewCell
+        cell?.setupDesign(data: self.listOptionsMusicTypes[indexPath.row])
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
