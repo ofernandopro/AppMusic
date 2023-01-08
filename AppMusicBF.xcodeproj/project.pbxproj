@@ -29,6 +29,7 @@
 		9C04CB2ED048D4284D2D9B9B /* Pods_AppMusicBF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7D133CE2FC149998D07F2 /* Pods_AppMusicBF.framework */; };
 		C48076D6296B57BF00A61C49 /* testElements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48076D5296B57BF00A61C49 /* testElements.storyboard */; };
 		C48076D8296B61D500A61C49 /* MusicTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076D7296B61D500A61C49 /* MusicTypeCollectionViewCell.swift */; };
+		C48076DB296B6FA600A61C49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076DA296B6FA600A61C49 /* LibraryViewController.swift */; };
 		C4AA52992967986A00D31466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA52982967986A00D31466 /* RootViewController.swift */; };
 		C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA529D29679A1C00D31466 /* RootScreen.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		B9F7D133CE2FC149998D07F2 /* Pods_AppMusicBF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppMusicBF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48076D5296B57BF00A61C49 /* testElements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = testElements.storyboard; sourceTree = "<group>"; };
 		C48076D7296B61D500A61C49 /* MusicTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C48076DA296B6FA600A61C49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		C4AA52982967986A00D31466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4AA529D29679A1C00D31466 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 		04C7021E270E2A9200FF8A27 /* AppMusicBF */ = {
 			isa = PBXGroup;
 			children = (
+				C48076D9296B6F8900A61C49 /* Library */,
 				C4AA52972967985100D31466 /* Root */,
 				04C70236270E2E6E00FF8A27 /* Extension */,
 				04C70244270E473700FF8A27 /* CustomView */,
@@ -217,6 +220,14 @@
 				62B7D7BF86D3D21C3A599AF9 /* Pods-AppMusicBF.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C48076D9296B6F8900A61C49 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C48076DA296B6FA600A61C49 /* LibraryViewController.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		C4AA52972967985100D31466 /* Root */ = {
@@ -365,6 +376,7 @@
 				04C70243270E415800FF8A27 /* CardViewTableViewCell.swift in Sources */,
 				C4AA52992967986A00D31466 /* RootViewController.swift in Sources */,
 				042921AD2789AFA900A04895 /* CustomNavBar.swift in Sources */,
+				C48076DB296B6FA600A61C49 /* LibraryViewController.swift in Sources */,
 				04D6971A277DA777002DE657 /* DetailTableViewCellScreen.swift in Sources */,
 				04D69717277DA6F3002DE657 /* DetailTableViewCell.swift in Sources */,
 				04C70235270E2E6100FF8A27 /* CardViewModel.swift in Sources */,
