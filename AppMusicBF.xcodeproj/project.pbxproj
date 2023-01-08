@@ -27,6 +27,7 @@
 		04D69717277DA6F3002DE657 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69716277DA6F3002DE657 /* DetailTableViewCell.swift */; };
 		04D6971A277DA777002DE657 /* DetailTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D69719277DA777002DE657 /* DetailTableViewCellScreen.swift */; };
 		9C04CB2ED048D4284D2D9B9B /* Pods_AppMusicBF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F7D133CE2FC149998D07F2 /* Pods_AppMusicBF.framework */; };
+		C48076D6296B57BF00A61C49 /* testElements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48076D5296B57BF00A61C49 /* testElements.storyboard */; };
 		C4AA52992967986A00D31466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA52982967986A00D31466 /* RootViewController.swift */; };
 		C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA529D29679A1C00D31466 /* RootScreen.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		44ECCF059A83E3E6AE630834 /* Pods-AppMusicBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMusicBF.debug.xcconfig"; path = "Target Support Files/Pods-AppMusicBF/Pods-AppMusicBF.debug.xcconfig"; sourceTree = "<group>"; };
 		62B7D7BF86D3D21C3A599AF9 /* Pods-AppMusicBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMusicBF.release.xcconfig"; path = "Target Support Files/Pods-AppMusicBF/Pods-AppMusicBF.release.xcconfig"; sourceTree = "<group>"; };
 		B9F7D133CE2FC149998D07F2 /* Pods_AppMusicBF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppMusicBF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48076D5296B57BF00A61C49 /* testElements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = testElements.storyboard; sourceTree = "<group>"; };
 		C4AA52982967986A00D31466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4AA529D29679A1C00D31466 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 				C4AA529B296799BE00D31466 /* Cell */,
 				C4AA529A296799B000D31466 /* Screen */,
 				C4AA52982967986A00D31466 /* RootViewController.swift */,
+				C48076D5296B57BF00A61C49 /* testElements.storyboard */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48076D6296B57BF00A61C49 /* testElements.storyboard in Resources */,
 				04C7022C270E2AA300FF8A27 /* LaunchScreen.storyboard in Resources */,
 				04C70229270E2AA300FF8A27 /* Assets.xcassets in Resources */,
 			);

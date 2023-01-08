@@ -49,6 +49,14 @@ class RootScreen: UIView {
         return btn
     }()
     
+    lazy var collectionView: UICollectionView = {
+       let cv = UICollectionView()
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        
+        cv.showsVerticalScrollIndicator = false
+        return cv
+    }()
+    
     lazy var tableView: UITableView = {
        let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
