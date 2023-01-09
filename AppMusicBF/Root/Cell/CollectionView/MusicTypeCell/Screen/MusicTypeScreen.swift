@@ -22,7 +22,6 @@ class MusicTypeScreen: UIView {
     lazy var titleLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Energia"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = .white
         label.numberOfLines = 1

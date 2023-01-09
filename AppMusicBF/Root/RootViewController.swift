@@ -12,6 +12,8 @@ class RootViewController: UIViewController {
     var screen: RootScreen?
     
     let listOptionsMusicTypes = ["Relax", "Em trânsito", "Energia", "Treino", "Foco"]
+    //var listSections = ["Para Você", "Mais Tocadas", "Minhas Preferidas", "Pagode", "Internacional"]
+    var listSections = ["Para Você"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,17 +44,17 @@ extension RootViewController: RootScreenDelegate {
 extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.listSections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListMusicsTableViewCell.identifier, for: indexPath) as? ListMusicsTableViewCell
-        cell?.setupCell(title: "Ola")
+        cell?.setupCell(title: self.listSections[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
 }

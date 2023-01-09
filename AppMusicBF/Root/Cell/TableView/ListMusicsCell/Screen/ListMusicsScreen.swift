@@ -25,7 +25,7 @@ class ListMusicsScreen: UIView {
     lazy var titleLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.font = UIFont.boldSystemFont(ofSize: 26)
         label.textColor = .white
         label.numberOfLines = 1
         return label
@@ -34,12 +34,12 @@ class ListMusicsScreen: UIView {
     lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.backgroundColor = .yellow
+        cv.backgroundColor = .clear
         cv.showsHorizontalScrollIndicator = false
         cv.register(MusicCollectionViewCell.self, forCellWithReuseIdentifier: MusicCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 150, height: 50)
+        layout.itemSize = CGSize(width: 150, height: 200)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         cv.setCollectionViewLayout(layout, animated: false)
         return cv
@@ -69,16 +69,16 @@ class ListMusicsScreen: UIView {
             self.view.topAnchor.constraint(equalTo: self.topAnchor),
             self.view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.view.heightAnchor.constraint(equalToConstant: 200),
+            self.view.heightAnchor.constraint(equalToConstant: 250),
             
             self.titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            self.titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20),
+            self.titleLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 10),
             
             self.collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.collectionView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 30),
-            self.collectionView.heightAnchor.constraint(equalToConstant: 70)
+            self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.collectionView.heightAnchor.constraint(equalToConstant: 200)
             
         ])
     }

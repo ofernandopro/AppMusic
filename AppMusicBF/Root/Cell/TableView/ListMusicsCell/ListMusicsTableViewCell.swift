@@ -12,10 +12,12 @@ class ListMusicsTableViewCell: UITableViewCell {
     static let identifier: String = "ListMusicsTableViewCell"
     
     var screen: ListMusicsScreen = ListMusicsScreen()
+    var listMusics: [Music] = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
+        self.listMusics = MusicData
         self.screen.configDelegates(delegate: self, collectionViewDelegate: self, collectionViewDataSource: self)
         self.setupDesign()
         self.setupViews()
@@ -26,16 +28,16 @@ class ListMusicsTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
     }
     
+    public func setupCell(title: String){
+        self.screen.titleLabel.text = title
+    }
+    
     private func setupViews(){
         self.contentView.addSubview(self.screen)
     }
     
     private func setupConstraints(){
         self.screen.pin(to: self.contentView)
-    }
-    
-    public func setupCell(title: String){
-        self.screen.setupCell(title: title)
     }
     
     required init?(coder: NSCoder) {
@@ -51,19 +53,18 @@ class ListMusicsTableViewCell: UITableViewCell {
 extension ListMusicsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.listMusics.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell
-        //cell?.setupDesign(data: self.listOptionsMusicTypes[indexPath.row])
-        cell?.backgroundColor = .orange
+        cell?.setupDesign(data: self.listMusics[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //return CGSize.init(width: view.frame.width, height: 50)
-        return CGSize.init(width: 150, height: 50)
+        return CGSize.init(width: 150, height: 200)
     }
     
 }

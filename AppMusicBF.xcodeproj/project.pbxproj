@@ -34,6 +34,8 @@
 		C48076F3296C385600A61C49 /* ListMusicsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076F2296C385600A61C49 /* ListMusicsScreen.swift */; };
 		C48076F6296C3B4000A61C49 /* MusicTypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076F5296C3B4000A61C49 /* MusicTypeScreen.swift */; };
 		C48076FC296C3D9200A61C49 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076FB296C3D9200A61C49 /* MusicCollectionViewCell.swift */; };
+		C48076FF296C982B00A61C49 /* MusicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076FE296C982B00A61C49 /* MusicScreen.swift */; };
+		C4807701296C9A3D00A61C49 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4807700296C9A3D00A61C49 /* Music.swift */; };
 		C4AA52992967986A00D31466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA52982967986A00D31466 /* RootViewController.swift */; };
 		C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA529D29679A1C00D31466 /* RootScreen.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		C48076F2296C385600A61C49 /* ListMusicsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMusicsScreen.swift; sourceTree = "<group>"; };
 		C48076F5296C3B4000A61C49 /* MusicTypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypeScreen.swift; sourceTree = "<group>"; };
 		C48076FB296C3D9200A61C49 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		C48076FE296C982B00A61C49 /* MusicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicScreen.swift; sourceTree = "<group>"; };
+		C4807700296C9A3D00A61C49 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		C4AA52982967986A00D31466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4AA529D29679A1C00D31466 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				04C70234270E2E6000FF8A27 /* CardViewModel.swift */,
+				C4807700296C9A3D00A61C49 /* Music.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,9 +297,18 @@
 		C48076FA296C3D7D00A61C49 /* MusicCell */ = {
 			isa = PBXGroup;
 			children = (
+				C48076FD296C981600A61C49 /* Screen */,
 				C48076FB296C3D9200A61C49 /* MusicCollectionViewCell.swift */,
 			);
 			path = MusicCell;
+			sourceTree = "<group>";
+		};
+		C48076FD296C981600A61C49 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C48076FE296C982B00A61C49 /* MusicScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		C4AA52972967985100D31466 /* Root */ = {
@@ -454,6 +468,7 @@
 				C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */,
 				042921B3278AF2EA00A04895 /* CustomPlayerView.swift in Sources */,
 				04C7023F270E36E900FF8A27 /* HomeViewControllerScreen.swift in Sources */,
+				C4807701296C9A3D00A61C49 /* Music.swift in Sources */,
 				C48076D8296B61D500A61C49 /* MusicTypeCollectionViewCell.swift in Sources */,
 				04D6970B277569FA002DE657 /* DetailViewController.swift in Sources */,
 				04C70224270E2A9300FF8A27 /* HomeViewController.swift in Sources */,
@@ -461,6 +476,7 @@
 				04C7023B270E2E6E00FF8A27 /* UIView + Extension.swift in Sources */,
 				04D697082774DEF4002DE657 /* CardActionView.swift in Sources */,
 				04C70220270E2A9300FF8A27 /* AppDelegate.swift in Sources */,
+				C48076FF296C982B00A61C49 /* MusicScreen.swift in Sources */,
 				C48076F3296C385600A61C49 /* ListMusicsScreen.swift in Sources */,
 				04C70246270E476500FF8A27 /* CustomCardView.swift in Sources */,
 				04C7023A270E2E6E00FF8A27 /* NSAttributedString + Extension.swift in Sources */,
