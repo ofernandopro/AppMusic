@@ -21,6 +21,10 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func loadView() {
         self.screen = RootScreen()
         self.screen?.configDelegates(rootScreenDelegate: self, collectionViewDelegate: self, collectionViewDataSource: self, tableViewDelegate: self, tableViewDataSource: self)
@@ -87,6 +91,12 @@ extension RootViewController: ListMusicsTableViewCellDelegate {
     
     func tappedMusicViewCell() {
         print("tappedMusicViewCell")
+        let vc = MusicDetailsViewController()
+//        vc.modalPresentationStyle = .overFullScreen
+//        self.navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+        
     }
 
 }

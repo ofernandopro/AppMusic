@@ -36,6 +36,7 @@
 		C48076FC296C3D9200A61C49 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076FB296C3D9200A61C49 /* MusicCollectionViewCell.swift */; };
 		C48076FF296C982B00A61C49 /* MusicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076FE296C982B00A61C49 /* MusicScreen.swift */; };
 		C4807701296C9A3D00A61C49 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4807700296C9A3D00A61C49 /* Music.swift */; };
+		C4807704296CAF9900A61C49 /* MusicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4807703296CAF9900A61C49 /* MusicDetailsViewController.swift */; };
 		C4AA52992967986A00D31466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA52982967986A00D31466 /* RootViewController.swift */; };
 		C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA529D29679A1C00D31466 /* RootScreen.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		C48076FB296C3D9200A61C49 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		C48076FE296C982B00A61C49 /* MusicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicScreen.swift; sourceTree = "<group>"; };
 		C4807700296C9A3D00A61C49 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		C4807703296CAF9900A61C49 /* MusicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailsViewController.swift; sourceTree = "<group>"; };
 		C4AA52982967986A00D31466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4AA529D29679A1C00D31466 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 		04C7021E270E2A9200FF8A27 /* AppMusicBF */ = {
 			isa = PBXGroup;
 			children = (
+				C4807702296CAF6C00A61C49 /* MusicDetails */,
 				C48076D9296B6F8900A61C49 /* Library */,
 				C4AA52972967985100D31466 /* Root */,
 				04C70236270E2E6E00FF8A27 /* Extension */,
@@ -311,10 +314,18 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		C4807702296CAF6C00A61C49 /* MusicDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C4807703296CAF9900A61C49 /* MusicDetailsViewController.swift */,
+			);
+			path = MusicDetails;
+			sourceTree = "<group>";
+		};
 		C4AA52972967985100D31466 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				C4AA529B296799BE00D31466 /* Cell */,
+				C4AA529B296799BE00D31466 /* Cells */,
 				C4AA529A296799B000D31466 /* Screen */,
 				C4AA52982967986A00D31466 /* RootViewController.swift */,
 				C48076D5296B57BF00A61C49 /* testElements.storyboard */,
@@ -330,13 +341,13 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		C4AA529B296799BE00D31466 /* Cell */ = {
+		C4AA529B296799BE00D31466 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				C48076EE296C34BA00A61C49 /* CollectionView */,
 				C48076ED296C34B400A61C49 /* TableView */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +471,7 @@
 				C48076F6296C3B4000A61C49 /* MusicTypeScreen.swift in Sources */,
 				042921AD2789AFA900A04895 /* CustomNavBar.swift in Sources */,
 				C48076DB296B6FA600A61C49 /* LibraryViewController.swift in Sources */,
+				C4807704296CAF9900A61C49 /* MusicDetailsViewController.swift in Sources */,
 				C48076FC296C3D9200A61C49 /* MusicCollectionViewCell.swift in Sources */,
 				C48076F0296C34F600A61C49 /* ListMusicsTableViewCell.swift in Sources */,
 				04D6971A277DA777002DE657 /* DetailTableViewCellScreen.swift in Sources */,

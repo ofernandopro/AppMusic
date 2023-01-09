@@ -33,6 +33,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.windowScene = windowScene
         self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
+        
+        
 
         let rootViewController = RootViewController()
         rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
@@ -41,7 +43,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         libraryViewController.view.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
         libraryViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
-        tabBarController.viewControllers = [rootViewController, libraryViewController]
+        let firstNavigationController = UINavigationController(rootViewController: rootViewController)
+        let secondNavigationController = UINavigationController(rootViewController: libraryViewController)
+        
+        tabBarController.viewControllers = [firstNavigationController, secondNavigationController]
         
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
 //        self.window?.windowScene = windowScene
