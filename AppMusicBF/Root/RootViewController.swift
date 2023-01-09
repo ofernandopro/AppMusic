@@ -47,7 +47,7 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListMusicsTableViewCell.identifier, for: indexPath) as? ListMusicsTableViewCell
-        //cell?.setupDesign(data: self.listOptionsMusicTypes[indexPath.row])
+        cell?.setupCell(title: "Ola")
         return cell ?? UITableViewCell()
     }
     

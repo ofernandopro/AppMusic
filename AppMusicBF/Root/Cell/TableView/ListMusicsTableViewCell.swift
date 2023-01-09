@@ -11,38 +11,31 @@ class ListMusicsTableViewCell: UITableViewCell {
 
     static let identifier: String = "ListMusicsTableViewCell"
     
-    lazy var view: UIView = {
-       let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .clear
-        return v
-    }()
-    
-    lazy var titleLabel: UILabel = {
-       let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Musics"
-        label.font = UIFont.boldSystemFont(ofSize: 24)
-        label.textColor = .white
-        label.numberOfLines = 1
-        return label
-    }()
+    var screen: ListMusicsScreen = ListMusicsScreen()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
-        self.setUpDesign()
+        self.setupDesign()
+        self.setupViews()
         self.setupViews()
         self.setupConstraints()
     }
     
-    private func setUpDesign(){
+    private func setupDesign(){
         self.backgroundColor = .clear
     }
     
     private func setupViews(){
-        self.addSubview(self.view)
-        self.view.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.screen)
+    }
+    
+    private func setupConstraints(){
+        self.screen.pin(to: self.contentView)
+    }
+    
+    public func setupCell(title: String){
+        self.screen.setupCell(title: title)
     }
     
     required init?(coder: NSCoder) {
@@ -51,18 +44,6 @@ class ListMusicsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            
-            self.view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.view.topAnchor.constraint(equalTo: self.topAnchor),
-            self.view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.view.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.view.heightAnchor.constraint(equalToConstant: 150),
-            
-        ])
     }
     
 }
