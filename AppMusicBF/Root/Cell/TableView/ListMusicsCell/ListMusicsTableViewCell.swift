@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol ListMusicsTableViewCellDelegate: AnyObject{
+    func tappedMusicViewCell()
+}
+
 class ListMusicsTableViewCell: UITableViewCell {
 
     static let identifier: String = "ListMusicsTableViewCell"
+    private weak var delegate: ListMusicsTableViewCellDelegate?
     
     var screen: ListMusicsScreen = ListMusicsScreen()
     var listMusics: [Music] = []
@@ -26,6 +31,10 @@ class ListMusicsTableViewCell: UITableViewCell {
     
     private func setupDesign(){
         self.backgroundColor = .clear
+    }
+    
+    public func configDelegate(delegate: ListMusicsTableViewCellDelegate?) {
+        self.delegate = delegate
     }
     
     public func setupCell(title: String){
@@ -59,6 +68,7 @@ extension ListMusicsTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell
         cell?.setupDesign(data: self.listMusics[indexPath.row])
+        cell?.screen.configDelegates(delegate: self)
         return cell ?? UICollectionViewCell()
     }
     
@@ -69,6 +79,10 @@ extension ListMusicsTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     
 }
 
-extension ListMusicsTableViewCell: ListMusicsScreenDelegate {
-
+extension ListMusicsTableViewCell: ListMusicsScreenDelegate, MusicScreenDelegate {
+    
+    func tappedMusicView() {
+        self.delegate?.tappedMusicViewCell()
+    }
+    
 }

@@ -50,6 +50,7 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListMusicsTableViewCell.identifier, for: indexPath) as? ListMusicsTableViewCell
         cell?.setupCell(title: self.listSections[indexPath.row])
+        cell?.configDelegate(delegate: self)
         return cell ?? UITableViewCell()
     }
     
@@ -80,4 +81,12 @@ extension RootViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return CGSize.init(width: 150, height: 50)
     }
     
+}
+
+extension RootViewController: ListMusicsTableViewCellDelegate {
+    
+    func tappedMusicViewCell() {
+        print("tappedMusicViewCell")
+    }
+
 }

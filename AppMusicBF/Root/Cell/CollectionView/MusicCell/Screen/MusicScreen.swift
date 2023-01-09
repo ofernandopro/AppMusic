@@ -7,12 +7,19 @@
 
 import UIKit
 
+protocol MusicScreenDelegate: AnyObject {
+    func tappedMusicView()
+}
+
 class MusicScreen: UIView {
 
+    private weak var delegate: MusicScreenDelegate?
+    
     lazy var view: UIView = {
        let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = .clear
+        v.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actionMusicView)))
         return v
     }()
     
@@ -24,6 +31,10 @@ class MusicScreen: UIView {
         v.layer.cornerRadius = 10
         return v
     }()
+    
+    @objc func actionMusicView() {
+        self.delegate?.tappedMusicView()
+    }
     
     lazy var musicImageView: UIImageView = {
        let img = UIImageView()
@@ -97,6 +108,10 @@ class MusicScreen: UIView {
             self.titleLabel.topAnchor.constraint(equalTo: self.musicImageView.bottomAnchor, constant: 10),
             
         ])
+    }
+    
+    public func configDelegates(delegate: MusicScreenDelegate){
+        self.delegate = delegate
     }
     
 }
