@@ -38,7 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
         let libraryViewController = LibraryViewController()
-        libraryViewController.view.backgroundColor = .black
+        libraryViewController.view.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
         libraryViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
         tabBarController.viewControllers = [rootViewController, libraryViewController]

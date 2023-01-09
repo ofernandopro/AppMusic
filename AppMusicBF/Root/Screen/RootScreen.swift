@@ -53,7 +53,7 @@ class RootScreen: UIView {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.backgroundColor = .clear
-        cv.showsHorizontalScrollIndicator = true
+        cv.showsHorizontalScrollIndicator = false
         cv.register(MusicTypeCollectionViewCell.self, forCellWithReuseIdentifier: MusicTypeCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
@@ -68,6 +68,8 @@ class RootScreen: UIView {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.separatorStyle = .none
         tv.showsVerticalScrollIndicator = false
+        tv.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
+        tv.register(ListMusicsTableViewCell.self, forCellReuseIdentifier: ListMusicsTableViewCell.identifier)
         return tv
     }()
     
@@ -96,21 +98,21 @@ class RootScreen: UIView {
         
         NSLayoutConstraint.activate([
         
-            self.headerView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             self.headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.headerView.heightAnchor.constraint(equalToConstant: 200),
+            self.headerView.heightAnchor.constraint(equalToConstant: 160),
             
-            self.logoImageView.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
+            self.logoImageView.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 30),
             self.logoImageView.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor, constant: 12),
             self.logoImageView.heightAnchor.constraint(equalToConstant: 30),
             self.logoImageView.widthAnchor.constraint(equalToConstant: 30),
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
+            self.titleLabel.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 30),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.logoImageView.trailingAnchor, constant: 5),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.profileButton.leadingAnchor, constant: -20),
             
-            self.profileButton.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 70),
+            self.profileButton.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 30),
             self.profileButton.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -10),
             self.profileButton.heightAnchor.constraint(equalToConstant: 30),
             self.profileButton.widthAnchor.constraint(equalToConstant: 30),
