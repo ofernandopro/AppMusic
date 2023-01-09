@@ -18,7 +18,6 @@ class ListMusicsTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.setupDesign()
         self.setupViews()
-        self.setupViews()
         self.setupConstraints()
     }
     

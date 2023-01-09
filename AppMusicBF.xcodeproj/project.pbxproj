@@ -32,6 +32,7 @@
 		C48076DB296B6FA600A61C49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076DA296B6FA600A61C49 /* LibraryViewController.swift */; };
 		C48076F0296C34F600A61C49 /* ListMusicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076EF296C34F600A61C49 /* ListMusicsTableViewCell.swift */; };
 		C48076F3296C385600A61C49 /* ListMusicsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076F2296C385600A61C49 /* ListMusicsScreen.swift */; };
+		C48076F6296C3B4000A61C49 /* MusicTypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48076F5296C3B4000A61C49 /* MusicTypeScreen.swift */; };
 		C4AA52992967986A00D31466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA52982967986A00D31466 /* RootViewController.swift */; };
 		C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA529D29679A1C00D31466 /* RootScreen.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		C48076DA296B6FA600A61C49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		C48076EF296C34F600A61C49 /* ListMusicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMusicsTableViewCell.swift; sourceTree = "<group>"; };
 		C48076F2296C385600A61C49 /* ListMusicsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMusicsScreen.swift; sourceTree = "<group>"; };
+		C48076F5296C3B4000A61C49 /* MusicTypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypeScreen.swift; sourceTree = "<group>"; };
 		C4AA52982967986A00D31466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4AA529D29679A1C00D31466 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 		C48076EE296C34BA00A61C49 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				C48076F4296C3B2C00A61C49 /* Screen */,
 				C48076D7296B61D500A61C49 /* MusicTypeCollectionViewCell.swift */,
 			);
 			path = CollectionView;
@@ -255,6 +258,14 @@
 			isa = PBXGroup;
 			children = (
 				C48076F2296C385600A61C49 /* ListMusicsScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C48076F4296C3B2C00A61C49 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C48076F5296C3B4000A61C49 /* MusicTypeScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -405,6 +416,7 @@
 				04D6970E27756A3D002DE657 /* DetailViewControllerScreen.swift in Sources */,
 				04C70243270E415800FF8A27 /* CardViewTableViewCell.swift in Sources */,
 				C4AA52992967986A00D31466 /* RootViewController.swift in Sources */,
+				C48076F6296C3B4000A61C49 /* MusicTypeScreen.swift in Sources */,
 				042921AD2789AFA900A04895 /* CustomNavBar.swift in Sources */,
 				C48076DB296B6FA600A61C49 /* LibraryViewController.swift in Sources */,
 				C48076F0296C34F600A61C49 /* ListMusicsTableViewCell.swift in Sources */,
