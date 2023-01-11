@@ -14,23 +14,23 @@ protocol RootScreenDelegate: AnyObject{
 class RootScreen: UIView {
     
     private weak var delegate: RootScreenDelegate?
-
+    
     lazy var headerView: UIView = {
-       let v = UIView()
+        let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
         return v
     }()
     
     lazy var logoImageView: UIImageView = {
-       let img = UIImageView()
+        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.image = UIImage(named: "app_logo")
         return img
     }()
     
     lazy var titleLabel: UILabel = {
-       let l = UILabel()
+        let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .white
         l.font = UIFont.boldSystemFont(ofSize: 26)
@@ -39,7 +39,7 @@ class RootScreen: UIView {
     }()
     
     lazy var profileButton: UIButton = {
-       let btn = UIButton()
+        let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("", for: .normal)
         btn.setImage(UIImage(systemName: "person.crop.circle.fill"), for: .normal)
@@ -64,7 +64,7 @@ class RootScreen: UIView {
     }()
     
     lazy var tableView: UITableView = {
-       let tv = UITableView()
+        let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.separatorStyle = .none
         tv.showsVerticalScrollIndicator = false
@@ -74,12 +74,12 @@ class RootScreen: UIView {
     }()
     
     init() {
-       super.init(frame: CGRect())
+        super.init(frame: CGRect())
         DispatchQueue.main.async {
             self.setupViews()
             self.setupConstraints()
         }
-   }
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -97,7 +97,7 @@ class RootScreen: UIView {
     private func setupConstraints(){
         
         NSLayoutConstraint.activate([
-        
+            
             self.headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             self.headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -128,7 +128,7 @@ class RootScreen: UIView {
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
         ])
-                
+        
     }
     
     public func configDelegates(rootScreenDelegate: RootScreenDelegate, collectionViewDelegate: UICollectionViewDelegate, collectionViewDataSource: UICollectionViewDataSource, tableViewDelegate: UITableViewDelegate, tableViewDataSource: UITableViewDataSource) {

@@ -12,10 +12,10 @@ class MusicTypeScreen: UIView {
     lazy var view: UIView = {
        let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .clear
+        v.backgroundColor = UIColor(red: 70/255, green: 70/255, blue: 70/255, alpha: 1)
         v.layer.cornerRadius = 20
         v.layer.borderWidth = 2
-        v.layer.borderColor = UIColor.systemPink.cgColor
+        v.layer.borderColor = UIColor.lightGray.cgColor
         return v
     }()
     

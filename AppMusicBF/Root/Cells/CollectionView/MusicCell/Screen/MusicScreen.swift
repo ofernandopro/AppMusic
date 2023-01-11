@@ -26,20 +26,15 @@ class MusicScreen: UIView {
     lazy var musicWrapView: UIView = {
        let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .systemIndigo
-        v.clipsToBounds = true
-        v.layer.cornerRadius = 10
         return v
     }()
-    
-    @objc func actionMusicView() {
-        self.delegate?.tappedMusicView()
-    }
     
     lazy var musicImageView: UIImageView = {
        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.image = UIImage(named: "fifa_world_cup_qatar_intro")
+        img.clipsToBounds = true
+        img.layer.cornerRadius = 10
         return img
     }()
     
@@ -65,6 +60,10 @@ class MusicScreen: UIView {
         super.init(frame: frame)
         self.setupViews()
         self.setupConstraints()
+    }
+    
+    @objc func actionMusicView() {
+        self.delegate?.tappedMusicView()
     }
     
     required init?(coder: NSCoder) {

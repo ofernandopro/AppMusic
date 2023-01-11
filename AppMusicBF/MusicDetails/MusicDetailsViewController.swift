@@ -9,10 +9,26 @@ import UIKit
 
 class MusicDetailsViewController: UIViewController {
 
+    var screen: MusicDetailsScreen?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(red: 21/255, green: 44/255, blue: 70/255, alpha: 1)
+    }
+    
+    override func loadView() {
+        self.screen = MusicDetailsScreen()
+        self.screen?.configDelegates(delegate: self)
+        self.view = self.screen
     }
 
+}
+
+extension MusicDetailsViewController: MusicDetailsScreenDelegate {
+    
+    func tappedCloseButton() {
+        print(#function)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

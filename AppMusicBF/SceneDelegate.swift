@@ -26,8 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBarController = UITabBarController()
         
-        tabBarController.tabBar.backgroundColor = .black
-        tabBarController.tabBar.tintColor = .systemPink
+        tabBarController.tabBar.backgroundColor = UIColor(red: 70/255, green: 70/255, blue: 70/255, alpha: 1)
+        tabBarController.tabBar.tintColor = .white
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.windowScene = windowScene
@@ -43,10 +43,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         libraryViewController.view.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
         libraryViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
+        let viewController = UIViewController()
+        rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        
         let firstNavigationController = UINavigationController(rootViewController: rootViewController)
         let secondNavigationController = UINavigationController(rootViewController: libraryViewController)
+        let thirdNavigationController = UINavigationController(rootViewController: viewController)
         
-        tabBarController.viewControllers = [firstNavigationController, secondNavigationController]
+        tabBarController.viewControllers = [firstNavigationController, secondNavigationController, thirdNavigationController]
         
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
 //        self.window?.windowScene = windowScene

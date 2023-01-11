@@ -39,6 +39,8 @@
 		C4807704296CAF9900A61C49 /* MusicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4807703296CAF9900A61C49 /* MusicDetailsViewController.swift */; };
 		C4AA52992967986A00D31466 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA52982967986A00D31466 /* RootViewController.swift */; };
 		C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA529D29679A1C00D31466 /* RootScreen.swift */; };
+		C4EB9A78296CCB5900573D9C /* MusicDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EB9A77296CCB5900573D9C /* MusicDetailsScreen.swift */; };
+		C4EB9A7C296CD1FE00573D9C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EB9A7B296CD1FE00573D9C /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		C4807703296CAF9900A61C49 /* MusicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailsViewController.swift; sourceTree = "<group>"; };
 		C4AA52982967986A00D31466 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4AA529D29679A1C00D31466 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
+		C4EB9A77296CCB5900573D9C /* MusicDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailsScreen.swift; sourceTree = "<group>"; };
+		C4EB9A7B296CD1FE00573D9C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		04C7021E270E2A9200FF8A27 /* AppMusicBF */ = {
 			isa = PBXGroup;
 			children = (
+				C4EB9A79296CD1C400573D9C /* Resources */,
 				C4807702296CAF6C00A61C49 /* MusicDetails */,
 				C48076D9296B6F8900A61C49 /* Library */,
 				C4AA52972967985100D31466 /* Root */,
@@ -125,6 +130,7 @@
 				04C7021F270E2A9300FF8A27 /* AppDelegate.swift */,
 				04C70221270E2A9300FF8A27 /* SceneDelegate.swift */,
 				04C70228270E2AA300FF8A27 /* Assets.xcassets */,
+				C48076D5296B57BF00A61C49 /* testElements.storyboard */,
 				04C7022A270E2AA300FF8A27 /* LaunchScreen.storyboard */,
 				04C7022D270E2AA300FF8A27 /* Info.plist */,
 			);
@@ -317,9 +323,18 @@
 		C4807702296CAF6C00A61C49 /* MusicDetails */ = {
 			isa = PBXGroup;
 			children = (
+				C4807705296CC8E600A61C49 /* Screen */,
 				C4807703296CAF9900A61C49 /* MusicDetailsViewController.swift */,
 			);
 			path = MusicDetails;
+			sourceTree = "<group>";
+		};
+		C4807705296CC8E600A61C49 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB9A77296CCB5900573D9C /* MusicDetailsScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		C4AA52972967985100D31466 /* Root */ = {
@@ -328,7 +343,6 @@
 				C4AA529B296799BE00D31466 /* Cells */,
 				C4AA529A296799B000D31466 /* Screen */,
 				C4AA52982967986A00D31466 /* RootViewController.swift */,
-				C48076D5296B57BF00A61C49 /* testElements.storyboard */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -348,6 +362,22 @@
 				C48076ED296C34B400A61C49 /* TableView */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C4EB9A79296CD1C400573D9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB9A7A296CD1CA00573D9C /* Designables */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C4EB9A7A296CD1CA00573D9C /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB9A7B296CD1FE00573D9C /* GradientView.swift */,
+			);
+			path = Designables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +497,7 @@
 			files = (
 				04D6970E27756A3D002DE657 /* DetailViewControllerScreen.swift in Sources */,
 				04C70243270E415800FF8A27 /* CardViewTableViewCell.swift in Sources */,
+				C4EB9A7C296CD1FE00573D9C /* GradientView.swift in Sources */,
 				C4AA52992967986A00D31466 /* RootViewController.swift in Sources */,
 				C48076F6296C3B4000A61C49 /* MusicTypeScreen.swift in Sources */,
 				042921AD2789AFA900A04895 /* CustomNavBar.swift in Sources */,
@@ -479,6 +510,7 @@
 				04C70235270E2E6100FF8A27 /* CardViewModel.swift in Sources */,
 				C4AA529E29679A1C00D31466 /* RootScreen.swift in Sources */,
 				042921B3278AF2EA00A04895 /* CustomPlayerView.swift in Sources */,
+				C4EB9A78296CCB5900573D9C /* MusicDetailsScreen.swift in Sources */,
 				04C7023F270E36E900FF8A27 /* HomeViewControllerScreen.swift in Sources */,
 				C4807701296C9A3D00A61C49 /* Music.swift in Sources */,
 				C48076D8296B61D500A61C49 /* MusicTypeCollectionViewCell.swift in Sources */,
